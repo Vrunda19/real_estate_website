@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Work Sans", sans-serif;
+
+  --color-surface: #fbf9f8;
+  --color-surface-dim: #dbd9d9;
+  --color-surface-container-low: #f5f3f3;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #44474d;
+  
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0d1c32;
+  
+  --color-secondary: #775a19;
+  --color-outline-variant: #c5c6cd;
+  
+  --radius-custom: 0.25rem;
+  
+  --spacing-section-gap: 120px;
+  --spacing-gutter: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0px 20px 40px rgba(10, 25, 47, 0.05);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 30px 60px rgba(10, 25, 47, 0.08);
+}
