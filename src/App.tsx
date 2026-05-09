@@ -471,7 +471,7 @@ export default function App() {
                 </div>
                 <div>
                   <div className="text-[10px] tracking-widest uppercase font-bold text-white/50 mb-2 font-sans">Office</div>
-                  <p className="text-lg">Near MVM school, off Veera Desai Road, Andheri West</p>
+                  <p className="text-lg">Andheri West, Mumbai - 400058</p>
                 </div>
               </div>
               <div className="flex gap-6">
