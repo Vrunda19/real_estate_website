@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import buildingsImg from './assets/buildings.png';
+import qrCodeImg from './assets/qr-code.jpg';
 
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -483,13 +484,13 @@ export default function App() {
                 </div>
               </div>
               <div className="pt-8 flex gap-4">
-                <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
+                <a href="https://www.linkedin.com/in/tejas-parekh-69a107405?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
                   <Linkedin className="w-4 h-4 text-white/50 group-hover:text-white" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
+                <a href="https://www.facebook.com/share/17eW4jL1hq/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
                   <Facebook className="w-4 h-4 text-white/50 group-hover:text-white" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
+                <a href="https://www.instagram.com/shreeji_prime_realty?igsh=MXEzNHlxMTBvdjFscA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10 hover:bg-secondary transition-colors group">
                   <Instagram className="w-4 h-4 text-white/50 group-hover:text-white" />
                 </a>
               </div>
@@ -536,15 +537,28 @@ export default function App() {
             SHREEJI PRIME REALTY PORTFOLIO
           </span>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-16">
-            {['Privacy Policy', 'Terms of Service', 'Cookie Settings', 'LinkedIn', 'Facebook', 'Instagram'].map(link => (
+            {[
+              { name: 'Privacy Policy', url: '#' },
+              { name: 'Terms of Service', url: '#' },
+              { name: 'Cookie Settings', url: '#' },
+              { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tejas-parekh-69a107405?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+              { name: 'Facebook', url: 'https://www.facebook.com/share/17eW4jL1hq/' },
+              { name: 'Instagram', url: 'https://www.instagram.com/shreeji_prime_realty?igsh=MXEzNHlxMTBvdjFscA==' },
+            ].map(link => (
               <a
-                key={link}
-                href="#"
+                key={link.name}
+                href={link.url}
+                target={link.url !== '#' ? "_blank" : "_self"}
+                rel={link.url !== '#' ? "noopener noreferrer" : ""}
                 className="text-[10px] tracking-widest uppercase font-semibold text-white/40 hover:text-white transition-colors"
               >
-                {link}
+                {link.name}
               </a>
             ))}
+          </div>
+
+          <div className="flex flex-col items-center justify-center mb-16">
+            <img src={qrCodeImg} alt="Digital Business Card QR Code" className="w-64 h-auto object-contain rounded-xl shadow-2xl" />
           </div>
           <p className="text-[10px] tracking-[0.1em] font-medium text-white/20 uppercase">
             © 2024 SHREEJI PRIME REALTY PORTFOLIO. ALL RIGHTS RESERVED.
