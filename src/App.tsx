@@ -180,7 +180,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-full flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className={`text-2xl font-serif font-bold tracking-tighter ${scrolled ? 'text-primary' : 'text-white'}`}>
-              SHREEJI PRIME
+              SHREEJI PRIME REALTY
             </span>
           </div>
 
@@ -198,7 +198,7 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="hidden md:block bg-primary text-on-primary px-8 py-3 text-xs tracking-widest uppercase font-semibold hover:bg-on-primary hover:text-primary transition-all duration-300 border border-primary">
               Consultation
@@ -291,11 +291,11 @@ export default function App() {
               Dedicated Service in Local Markets
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-10">
-              As a dynamic new agency in the real estate market, we bring fresh perspectives and dedicated energy to property transactions. Over the past 4 months, we have successfully collaborated with established broker networks to facilitate seamless property deals and lifestyle transformations.
+              As a dynamic new agency in the real estate market, we bring fresh perspectives and dedicated energy to property transactions. Over the past 6 months, we have successfully collaborated with established broker networks to facilitate seamless property deals and lifestyle transformations.
             </p>
             <div className="flex border-t border-b border-outline-variant py-8 gap-12">
               <div>
-                <div className="text-3xl font-serif font-bold text-primary mb-1">4+</div>
+                <div className="text-3xl font-serif font-bold text-primary mb-1">6+</div>
                 <span className="text-[10px] tracking-widest uppercase font-semibold text-on-surface-variant">Months Experience</span>
               </div>
               <div className="w-px bg-outline-variant" />
@@ -533,7 +533,7 @@ export default function App() {
       <footer className="bg-black py-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center text-center">
           <span className="text-2xl font-serif font-bold text-white tracking-[1px] mb-12">
-            SHREEJI PRIME PORTFOLIO
+            SHREEJI PRIME REALTY PORTFOLIO
           </span>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-16">
             {['Privacy Policy', 'Terms of Service', 'Cookie Settings', 'LinkedIn', 'Facebook', 'Instagram'].map(link => (
@@ -547,7 +547,7 @@ export default function App() {
             ))}
           </div>
           <p className="text-[10px] tracking-[0.1em] font-medium text-white/20 uppercase">
-            © 2024 SHREEJI PRIME PORTFOLIO. ALL RIGHTS RESERVED.
+            © 2024 SHREEJI PRIME REALTY PORTFOLIO. ALL RIGHTS RESERVED.
           </p>
         </div>
       </footer>
