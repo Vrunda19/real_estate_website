@@ -470,7 +470,6 @@ export default function App() {
                   <MapPin className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <div className="text-[10px] tracking-widest uppercase font-bold text-white/50 mb-2 font-sans">Office</div>
                   <p className="text-lg">Andheri West, Mumbai - 400058</p>
                 </div>
               </div>
