@@ -189,6 +189,12 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+);
+
 export default function App() {
   const [activeFilter, setActiveFilter] = useState<'All' | 'Residential' | 'Commercial'>('All');
   const [scrolled, setScrolled] = useState(false);
@@ -210,12 +216,12 @@ export default function App() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md h-20 shadow-sm' : 'bg-transparent h-24'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-full flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <span className={`text-2xl font-serif font-bold tracking-tighter ${scrolled ? 'text-primary' : 'text-white'}`}>
+            <span className={`text-lg sm:text-xl md:text-2xl font-serif font-bold tracking-tighter ${scrolled ? 'text-primary' : 'text-white'}`}>
               SHREEJI PRIME REALTY
             </span>
           </div>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
             {['Properties', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
               <a
                 key={item}
@@ -231,10 +237,10 @@ export default function App() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="hidden md:block bg-primary text-on-primary px-8 py-3 text-xs tracking-widest uppercase font-semibold hover:bg-on-primary hover:text-primary transition-all duration-300 border border-primary">
+              className="hidden lg:block bg-primary text-on-primary px-8 py-3 text-xs tracking-widest uppercase font-semibold hover:bg-on-primary hover:text-primary transition-all duration-300 border border-primary">
               Consultation
             </button>
-            <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
+            <button className="lg:hidden" onClick={() => setIsMenuOpen(true)}>
               <Menu className={scrolled ? 'text-primary' : 'text-white'} />
             </button>
           </div>
@@ -268,7 +274,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <header className="relative h-screen flex items-center overflow-hidden">
+      <header className="relative min-h-screen flex items-center pt-24 md:pt-28 pb-12 overflow-hidden">
         <div className="absolute inset-0 z-0 scale-105">
           <img
             className="w-full h-full object-cover brightness-[0.65]"
@@ -277,7 +283,7 @@ export default function App() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-12 md:pt-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -350,7 +356,7 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 md:-bottom-12 md:-left-12 bg-primary-container p-8 md:p-12 hidden sm:block max-w-[320px]">
+            <div className="absolute -bottom-8 left-4 sm:left-6 lg:-left-12 md:-bottom-12 bg-primary-container p-8 md:p-12 hidden sm:block max-w-[320px]">
               <p className="text-white text-xl md:text-2xl font-serif italic leading-snug">
                 "Excellence is not an act, but a habit."
               </p>
@@ -512,7 +518,7 @@ export default function App() {
                   <p className="text-lg">+91 92214 39014</p>
                 </div>
               </div>
-              <div className="pt-8 flex gap-4">
+              <div className="pt-8 flex flex-wrap gap-4">
                 <a href="https://wa.me/919221439014" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white flex items-center justify-center rounded-full hover:scale-110 transition-transform group shadow-lg">
                   <WhatsAppIcon className="w-6 h-6 text-[#25D366]" />
                 </a>
@@ -524,6 +530,9 @@ export default function App() {
                 </a>
                 <a href="https://www.linkedin.com/in/tejas-parekh-69a107405?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white flex items-center justify-center rounded-full hover:scale-110 transition-transform group shadow-lg">
                   <LinkedInIcon className="w-6 h-6 text-[#0A66C2]" />
+                </a>
+                <a href="https://www.youtube.com/@tejasparekh-o8s" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white flex items-center justify-center rounded-full hover:scale-110 transition-transform group shadow-lg">
+                  <YoutubeIcon className="w-6 h-6 text-[#FF0000]" />
                 </a>
               </div>
             </div>
@@ -577,6 +586,7 @@ export default function App() {
               { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tejas-parekh-69a107405?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
               { name: 'Facebook', url: 'https://www.facebook.com/share/17eW4jL1hq/' },
               { name: 'Instagram', url: 'https://www.instagram.com/shreeji_prime_realty?igsh=MXEzNHlxMTBvdjFscA==' },
+              { name: 'YouTube', url: 'https://www.youtube.com/@tejasparekh-o8s' },
             ].map(link => (
               <a
                 key={link.name}
